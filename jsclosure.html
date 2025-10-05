@@ -1,0 +1,38 @@
+<html>
+    <body>
+		<p id="demo"></p>
+		<script>
+			function createCounter(){
+			let count=0
+				function currentvalue()
+				{
+				  document.write(count+"<br>")
+				  }
+				function increment(){
+				 count ++;
+				  document.write(count+"<br>")
+				 
+				 }
+			 
+			  return {increment,currentvalue}
+			  }
+			  const counter= createCounter()
+			   
+			  counter.currentvalue()
+			  counter.increment()
+			  counter.currentvalue()
+			  counter.increment()
+			  
+			  
+			/*mutliply*/
+				function makeMultiplier(n) {
+					return function(x) {
+					  return x * n;
+					};
+				  }
+
+				document.getElementById("demo").innerHTML = makeMultiplier(2)(5) + "<br>" + makeMultiplier(3)(7);
+		
+		</script>
+	</body>
+</html>
